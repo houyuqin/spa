@@ -14,7 +14,7 @@ $(function(){
 
   var hot = new Handsontable(container, {
     data: data,
-    width:1000,
+    width:790,
     height: 300,
     colHeaders: ["语言名称","排名","升或降","变化幅度"],
     rowHearders: 0, 

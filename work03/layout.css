@@ -5,9 +5,8 @@ html,body{
   height: 100%;
 }
 .tbtit{
-  width: 200px;
-  height: 30px;
-  font-size: 20px;
+  width: 10%;
+//  height: 30px;
   margin: 10px auto;
 }
 #main{
@@ -18,5 +17,5 @@ html,body{
 #table{
   width:70%;
   height:60%;
-  margin: 0 0 0 350px;
+  margin: 0 auto;
 }
