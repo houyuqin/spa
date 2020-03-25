@@ -15,7 +15,7 @@ $(function(){
   var hot = new Handsontable(container, {
     data: data,
     width:1000,
-    height:300,
+    height: 300,
     colHeaders: ["语言名称","排名","升或降","变化幅度"],
     rowHearders: 0, 
     manualColumnResize: true,
@@ -25,11 +25,8 @@ $(function(){
     dropdownMenu: true,
     colWidths:190,
     rowHeight:70,
-    //autoColumnSize: { syncLimit:'40%' },
-
   });
 
-  //hot.refreshDimensions();
 
     var xData = [],
         yData = [];
