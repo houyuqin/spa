@@ -14,19 +14,50 @@
   <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="./timer-button.js"></script>
   <script>
-    $(function(){
+  $(function(){
+    var tb1 = new TimerButton();
+    tb1.show({
+      num: 9,
+      title: '发送验证码',
+      onClick: function(){
+        alert('已发送');
+      }
+    });
+
+      var $btnAdd = $('#add');
+
+      $btnAdd.click(function(){
+        var tb = new TimerButton();
+        tb.show({
+          num: 9,
+          title: '同意',
+          onClick: function(){
+            alert('就知道你会同意的');
+          }
+        });
+      });
+
+
+       /* $timerButton.show({
+          num: 9,
+          title: '发送验证码',
+          onClick: function(){
+            alert('已发送');
+          }
+        });
+
       var $btnAdd = $('#add');
 
       $btnAdd.click(function(){
         $timerButton.show({
-          num:60,
-          title:'发送验证码',
-          onClick:function(){
-            console.log('已经点击了')
+          num: 6,
+          title: '同意',
+          onClick: function(){
+            alert('就知道你会同意的');
           }
         });
-      })
-    })
+      });*/
+    });
   </script>
 </body>
 </html>
