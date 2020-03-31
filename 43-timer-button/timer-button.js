@@ -1,4 +1,4 @@
-define(['jquery'],function(){
+define(['jquery'],function($){
   function TimerButton(){
       var $btn = $('<input class="timer-button" type="button" disabled>'),
           cfg = {
@@ -33,6 +33,6 @@ define(['jquery'],function(){
       $btn.click(cfg.onClick);
     }
   };
-  return (); 
+  return TimerButton; 
 });
 
