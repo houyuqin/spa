@@ -1,3 +1,74 @@
 /*css file*/
+.nottepad-dlg-goto {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+}
 
+.notepad-dlg-goto .dialogbox {
+  border: 1px solid #0f7fdb;
+  box-shadow:10px 10px 10px #d6d6d6;
+  box-sizing: border-box;
+  cursor: default;
+  height: 160px;
+  width: 294px;
+  margin: 0 auto;
+  top: 100px;
+  position: relative;
+  user-select: none;
+}
 
+.notepad-dlg-goto .titlebar{
+  background-color: white;
+  font-size: 1.3em;
+  height: 30px;
+}
+
+.notepad-dlg-goto .title{
+  left: 10px;
+  line-height: 30px;
+  position: absolute;
+  margin: 0;
+}
+
+.notepad-dlg-goto .close-btn{
+  color: grey;
+  line-height: 30px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 30px;
+}
+
+.notepad-dlg-goto .main {
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  height: 127px;
+  padding: 12px;
+  position: relative;
+}
+
+.notepad-dlg-goto .txt-line-num {
+  box-sizing: border-box;
+  height: 30px;
+  width: 266px;
+  margin: 10px 0;
+}
+
+.notepad-dlg-goto input[type="button"]{
+  width: 86px;
+  height: 26px;
+  position: absolute;
+  bottom: 16px;
+}
+
+.nottepad-dlg-goto .btn-goto{
+  right: 108px;
+}
+
+.notepad-dlg-goto .btn-cancel{
+  right: 14px;
+}
