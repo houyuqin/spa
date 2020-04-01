@@ -7,8 +7,8 @@ requirejs.config({
 
 require(['jquery'],function($){
   $(function(){
-    require(['Banner'],function(Banner){
-      new Banner();
+    require(['banner'],function(Banner){
+      var $banner = new Banner();
     });
   });
 });
