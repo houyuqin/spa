@@ -1,3 +1,4 @@
+/* global define:true */
 define(['jquery'],function($){
   function Banner(){
     var $banner = $(''
@@ -27,6 +28,10 @@ define(['jquery'],function($){
     var index=1,
         linum=0,
         timer;
+
+    var cf = {
+      time:2000
+    };
 
     var $slider = $('#slider'),
         $left = $('#left'),
@@ -69,7 +74,8 @@ define(['jquery'],function($){
     }
 
     //自动轮播
-    function lunbo(){
+    this.lunbo = function lunbo(conf){
+      $.extend(cf,conf);
       timer = setInterval(function(){
         //index++;
         linum++;
@@ -78,10 +84,10 @@ define(['jquery'],function($){
         }
         next(index);
         liTrans(linum);
-      },2000);
-    }
+      },cf.time);
+    };
 
-    lunbo();
+    //this.lunbo();
 
 
     //鼠标滑入显示，滑出隐藏左右箭头
@@ -90,7 +96,16 @@ define(['jquery'],function($){
       $('span').css('opacity',0.5);
     });
     $('#box').mouseout(function(){
-      lunbo();
+    //this.lunbo(cf);
+     
+      timer = setInterval(function(){
+        linum++;
+        if(linum==5){
+          linum=0;
+        }
+        next(index);
+        liTrans(linum);
+      },cf.time);
       $('span').css('opacity',0);
     });
 

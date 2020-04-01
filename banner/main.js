@@ -8,7 +8,11 @@ requirejs.config({
 require(['jquery'],function($){
   $(function(){
     require(['banner'],function(Banner){
-      var $banner = new Banner();
+      var bn = new Banner();
+      bn.lunbo({
+        time:2000
+      });
+
     });
   });
 });
