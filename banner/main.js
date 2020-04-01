@@ -12,13 +12,11 @@
     +'<span id="left" class="btn"><</span>'
     +'<span id="right" class="btn">></span>'
     +'<ul class="nav" id="navs">'
-    //+'<li></li>'
     +'<li class="active">1</li>'
     +'<li>2</li>'
     +'<li>3</li>'
     +'<li>4</li>'
     +'<li>5</li>'
-    //+'<li></li>'
     +'</ul>'
     +''
   );
@@ -37,13 +35,27 @@
 
 
   //下一页
-  function next(i){
-    if(i == 6){
+  function next(){
+    index++;
+    if(index == 6){
       index = 1;
-      $slider.animate({left:left+'px'});
+      $slider.animate({left:left*index+'px'});
+      liTrans(index-1);
     }
-    $slider.animate({left:left*i+'px'});
-    $list.eq(i).addClass('active').siblings().removeClass('active');
+    $slider.animate({left:left*index+'px'},500);
+    liTrans(index-1);
+  }
+
+  //上一页
+  function prev(){
+    index--;
+    if(index == 0){
+      index = 5;
+      $slider.animate({left:left*(index)+'px'});
+      liTrans(index-1);
+    }
+    $slider.animate({left:left*(index)+'px'});
+    liTrans(index-1);
   }
 
   //list转换
@@ -58,7 +70,7 @@
   //自动轮播
   function lunbo(){
     timer = setInterval(function(){
-      index++;
+      //index++;
       linum++;
       if(linum==5){
         linum=0;
@@ -70,14 +82,6 @@
 
   lunbo();
 
-  //上一页
-  function prev(i){
-    i--;
-    if(i==0){
-      $slider.animate({left:left*5+'px'});
-    }
-    $slider.animate({left:left*i+'px'});
-  }
 
   //鼠标滑入显示，滑出隐藏左右箭头
   $('#box').mouseover(function(){
@@ -92,15 +96,15 @@
   //鼠标点击左右箭头
   $left.click(function(){
     prev(index);
-    linum--;
-    $list.eq(linum).addClass('active').siblings().removeClass('active');
+  /*  linum--;
+    if(linum == 0){
+      $list.eq(4).addClass('active').siblings().removeClass('active');
+    }
+    $list.eq(linum).addClass('active').siblings().removeClass('active');*/
   });
 
   $right.click(function(){
-    index++;
     next(index);
-    linum++;
-    $list.eq(linum).addClass('active').siblings().removeClass('active');
   });
 
   //点击下边list更改图片 
