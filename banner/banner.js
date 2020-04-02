@@ -45,6 +45,7 @@ define(['jquery'],function($){
       index++;
       if(index == 6){
         index = 1;
+
         $slider.animate({left:left*index+'px'});
         liTrans(index-1);
       }
@@ -73,18 +74,19 @@ define(['jquery'],function($){
       $list.eq(i).addClass('active').siblings().removeClass('active');
     }
 
+    function foo(){
+      linum++;
+      if(linum==5){
+        linum=0;
+      }
+      next(index);
+      liTrans(linum);
+    }
     //自动轮播
     this.lunbo = function lunbo(conf){
       $.extend(cf,conf);
-      timer = setInterval(function(){
-        //index++;
-        linum++;
-        if(linum==5){
-          linum=0;
-        }
-        next(index);
-        liTrans(linum);
-      },cf.time);
+      
+      timer = setInterval(foo,cf.time);
     };
 
     //this.lunbo();
@@ -96,16 +98,15 @@ define(['jquery'],function($){
       $('span').css('opacity',0.5);
     });
     $('#box').mouseout(function(){
-    //this.lunbo(cf);
-     
-      timer = setInterval(function(){
+      timer = setInterval(foo,cf.time);
+      /*timer = setInterval(function(){
         linum++;
         if(linum==5){
           linum=0;
         }
         next(index);
         liTrans(linum);
-      },cf.time);
+      },cf.time);*/
       $('span').css('opacity',0);
     });
 
