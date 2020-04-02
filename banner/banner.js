@@ -43,13 +43,14 @@ define(['jquery'],function($){
     //下一页
     function next(){
       index++;
-      if(index == 6){
+      if(index == 6){ 
         index = 1;
-
-        $slider.animate({left:left*index+'px'});
+        $slider.animate({left:left*6+'px'});
+        $slider.animate({left:left+'px'},0);
+        //$slider.css('left','-1200px');
         liTrans(index-1);
       }
-      $slider.animate({left:left*index+'px'},500);
+      $slider.animate({left:left*index+'px'});
       liTrans(index-1);
     }
 
@@ -58,7 +59,9 @@ define(['jquery'],function($){
       index--;
       if(index == 0){
         index = 5;
-        $slider.animate({left:left*(index)+'px'});
+        //$slider.css('left',left*5+'px');
+        $slider.animate({left:'0px'});
+        $slider.animate({left:left*5+'px'},0);
         liTrans(index-1);
       }
       $slider.animate({left:left*(index)+'px'});
