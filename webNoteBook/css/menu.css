@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#box {
+  width: 600px;
+  height: 650px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+#menu {
+  width: 600px;
+  height:20px;
+  border-bottom: 1px solid #000;
+}
+
+#menu div {
+  width: 50px;
+  height: 20px;
+  float: left;
+  font-size: 14px;
+  margin-left:10px;
+}
+
+#menu div:hover {
+  cursor: pointer;
+}
+
+.cen {
+  width: 600px;
+  height: 480px;
+}
+
+#area {
+  width: 594px;
+  height:623px;
+  overflow-y: scroll;
+}
+
+#family {
+  width: 140px;
+  height: 130px;
+  border: 1px solid #000;
+  overflow-y: scroll;
+}
+
+#family span:hover{
+  display: inline-block;
+  width: 120px;
+  background-color:blue
+}
+
+#style {
+  width: 90px;
+  height: 130px;
+  border: 1px solid #000;
+  overflow-y: scroll;
+}
+
+#style span:hover{
+  display: inline-block;
+  width: 70px;
+  background-color:blue
+}
+#size {
+  width: 70px;
+  height: 130px;
+  border: 1px solid #000;
+  overflow-y: scroll;
+}
+
+#size span:hover{
+  display: inline-block;
+  width: 50px;
+  background-color:blue
+}
+.one {
+  width:140px;
+}
+.two {
+  width: 90px;
+}
+.three {
+  width: 70px;
+}
+
+
+
+
+.notepad-dlg-font {
+  width:438px;
+  z-index: 10;
+  position:absolute;
+  top:50px;
+  left:350px;
+  background-color:white;
+}
+
+.notepad-dlg-font .dialogbox {
+  height: 544px;
+  width: 438px;
+  border:1px solid gray;
+  }
+.notepad-dlg-titlebar{
+  height:22px;
+  font-size:0.8em;
+  margin-top:5px;
+  margin-left:10px;
+}
+.notepad-dlg-titlebar p{
+  margin:0;
+  float:left;
+}
+.notepad-dlg-titlebar span{
+  float:right;
+  margin-right:10px
+}
+.notepad-dlg-font .main {
+  height: 516px;
+  background-color:#f0f0f0;
+  position:relative;
+}
+
+.notepad-dlg-font .main .font-family{
+  display: inline-block;
+  margin-left:5px;
+  float:left;
+}
+.notepad-dlg-font .main .font-style{
+  display: inline-block;
+  margin-left:50px;
+  float:left;
+}
+.notepad-dlg-font .main .font-size{
+  display: inline-block;
+  margin-left:50px;
+  float:left;
+}
+
+.notepad-dlg-font .main .sample {
+  border-color: white;
+  height: 78px;
+  margin-left: 16px;
+  margin-top: 158px;
+  width: 194px;
+}
+
+.notepad-dlg-font .main .script {
+  margin-left: 16px;
+  margin-top: 12px;
+}
+
+.notepad-dlg-font .main select {
+  height: 22px;
+  width: 214px;
+}
+.notepad-dlg-font .main .font-size {
+  display: inline-block;
+}
+
+.notepad-dlg-font .main .btn-ok {
+  width:80px;
+  height:25px;
+  bottom: 10px;
+  position: absolute;
+  right: 110px;
+}
+
+.notepad-dlg-font .main .btn-cancel {
+  width:80px;
+  height:25px;
+  bottom: 10px;
+  position: absolute;
+  right: 16px;
+}
+
+
+.notepad-com-list {
+  user-select: none;
+  width: 200px;
+}
+
+.notepad-com-list .editor {
+  border: 1px solid #0078d7;
+  box-sizing: border-box;
+  font-size: 1em;
+  height: 20px;
+  padding-left: 2px;
+  width: 100%;
+}
+
+.notepad-com-list .list {
+  background-color: white;
+  border: 1px solid #828790;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 146px;
+  margin:0;
+  padding:0;
+  overflow-y: scroll;
+  width: 100%;
+}
+.font-daxiao{
+  font-size:0.8em;
+}
+.notepad-com-list .list .item {
+  line-height: 16px;
+  padding-left: 2px;
+}
+
+.notepad-com-list .list .selected {
+  background-color: #0078d7;
+  color: white;
+}
+
+.list1,.list2,.list3 {
+  display: inline-block;
+  margin:0px 5px;                          
+}
