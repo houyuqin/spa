@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> timer button的测试页面  构造函数</title>
+ <link rel='stylesheet' href='./time-button.css' >
+</head>
+<body>
+<input type='button' id='add' value='添加定时器按钮'>
+<hr>
+<div id='main'></div>
+<!-- <input type='button' value='同意(6s)' class='box' disabled> -->
+    <script src='//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script src='./time-button.js'></script> 
+    <script>
+$(function(){
+     // $timerButton.show('#main');
+    var $btnAdd=$('#add');
+   
+    $btnAdd.click(function(){
+      var tb=new TimerButton();
+      tb.show({
+        title:'发送验证',
+        num:10,
+        onClick:function(){
+         alert('点击了定时器按钮')
+        }
+        });
+      })      })
+        </script>
+</body>
+</html>
